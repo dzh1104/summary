@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_data?useSSL=false
+    username: root
+    password: EnuoCripac1104
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 9527
+  servlet:
+    context-path: /zhding
+cupSize: B
+age: 18
+content: "cupSize: ${cupSize}, age: ${age}"
+girl:
+  cupSize: P
+  age: 2

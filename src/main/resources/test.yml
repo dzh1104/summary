@@ -1,0 +1,5 @@
+test2:
+  user:
+    username : test-lisi
+    age : 18
+    toString: the age of ${test2.user.username} is ${test2.user.age}

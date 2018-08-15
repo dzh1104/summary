@@ -19,6 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//学习地址: https://blog.csdn.net/saytime/article/details/74937664
 @RestController
 public class UserController {
 
@@ -31,17 +32,17 @@ public class UserController {
      * @param id
      * @return
      */
-//    @ApiOperation(value = "获取用户详细信息", notes = "根据url的id来获取用户详细信息")
-//    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Integer", paramType = "path")
-//    @RequestMapping(value = "user/{id}", method = RequestMethod.GET)
-//    public ResponseEntity<JsonResult> getUserById(@PathVariable(value = "id") Integer id) {
-//
-//        JsonResult r = new JsonResult(); try {
-//            User user = users.get(id); r.setResult(user); r.setStatus("ok");
-//        } catch (Exception e) {
-//            r.setResult(e.getClass().getName() + ":" + e.getMessage()); r.setStatus("error"); e.printStackTrace();
-//        } return ResponseEntity.ok(r);
-//    }
+    //    @ApiOperation(value = "获取用户详细信息", notes = "根据url的id来获取用户详细信息")
+    //    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Integer", paramType = "path")
+    //    @RequestMapping(value = "user/{id}", method = RequestMethod.GET)
+    //    public ResponseEntity<JsonResult> getUserById(@PathVariable(value = "id") Integer id) {
+    //
+    //        JsonResult r = new JsonResult(); try {
+    //            User user = users.get(id); r.setResult(user); r.setStatus("ok");
+    //        } catch (Exception e) {
+    //            r.setResult(e.getClass().getName() + ":" + e.getMessage()); r.setStatus("error"); e.printStackTrace();
+    //        } return ResponseEntity.ok(r);
+    //    }
 
     /**
      * 根据ID查询用户
@@ -50,14 +51,13 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "获取用户详细信息", notes = "根据url的id来获取用户详细信息")
-//    dataType 应该要为 String，因为在页面中的输入框 拿到的是 字符串类型的，不修改为 String，页面中的输入框会报错
+    //    dataType 应该要为 String，因为在页面中的输入框 拿到的是 字符串类型的，不修改为 String，页面中的输入框会报错
     @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "String", paramType = "path")
     @RequestMapping(value = "user/{id}", method = RequestMethod.GET)
     public ResponseEntity<JsonResult> getUserById(@PathVariable(value = "id") String id) {
 
         JsonResult r = new JsonResult(); try {
-            int numId = Integer.parseInt(id);
-            User user = users.get(numId); r.setResult(user); r.setStatus("ok");
+            int numId = Integer.parseInt(id); User user = users.get(numId); r.setResult(user); r.setStatus("ok");
         } catch (Exception e) {
             r.setResult(e.getClass().getName() + ":" + e.getMessage()); r.setStatus("error"); e.printStackTrace();
         } return ResponseEntity.ok(r);

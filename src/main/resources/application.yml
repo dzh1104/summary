@@ -1,6 +1,7 @@
 spring:
   profiles:
     active: dev
+#    数据库配置文件
   datasource:
     url: jdbc:mysql://localhost:3306/spring_data?useSSL=false
     username: root

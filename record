@@ -2,3 +2,5 @@
 多种玩法: https://blog.csdn.net/z23546498/article/details/69218553
 yml与properties的区别: https://www.cnblogs.com/winner-0715/p/6754994.html
     YAML的缺点：不能通过@PropertySource注解加载。如果需要使用@PropertySource注解的方式加载值，那就要使用properties文件
+2) JdbcTemplate
+整合JdbcTemplate: https://blog.csdn.net/saytime/article/details/74783294

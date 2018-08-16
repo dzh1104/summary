@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Configuration
-@PropertySource(value = "classpath:test.yml")
-@ConfigurationProperties(prefix = "test.user")
+// YAML的缺点：不能通过@PropertySource注解加载。如果需要使用@PropertySource注解的方式加载值，那就要使用properties文件
+@PropertySource(value = "classpath:test.properties")
+@ConfigurationProperties(prefix = "test2.user")
 public class PropertiesTestYmlConfig {
 
     private String username;

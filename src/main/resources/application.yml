@@ -1,11 +1,13 @@
 spring:
+  profiles:
+    active: dev
   datasource:
     url: jdbc:mysql://localhost:3306/spring_data?useSSL=false
     username: root
     password: EnuoCripac1104
     driver-class-name: com.mysql.cj.jdbc.Driver
 server:
-  port: 9527
+  port: 9528
   servlet:
     context-path: /zhding
 cupSize: B
@@ -19,3 +21,17 @@ test:
     username : zhangsan
     age : 18
     toString: the age of ${test.user.username} is ${test.user.age}
+
+---
+spring:
+  profiles: dev
+server:
+  servlet:
+    context-path: /dev
+
+---
+spring:
+  profiles: prod
+server:
+  servlet:
+    context-path: /prod
